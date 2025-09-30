@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run -it -v ./example_library/:/workspace cppdev/blas /bin/bash
+docker run -it -v $(pwd)example_library/:/workspace cppdev/latest /bin/bash
