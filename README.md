@@ -55,14 +55,13 @@ For this section, we will implement a few functions, as if we were writing a lib
 
 To finish our library, you need to complete the implementations of the following functions, all found in `example_library/src/linear_alg.cpp`:
 
-1. `calculateTwoNorm`: Calculates the 2-norm of a std::vector. Use the BLAS implementation for this, `cblas_dnrm2`.
-2. `calculateDotProduct`: Calculates the dot product of two std::vectors. Use the BLAS dot product implementation, `cblas_ddot` for this.
-3. `calculateProjection`: Calculates the projection of one vector onto another. Use the two other functions you just implemented for this.
+1. Complete the empty parts of the `example_library/CMakeLists.txt` file. Use `find_package(BLAS REQUIRED)` to ensure the BLAS dependency is included in the compiled output.
+2. `calculateTwoNorm`: Calculates the 2-norm of a std::vector. Use the BLAS implementation for this, `cblas_dnrm2`.
+3. `calculateDotProduct`: Calculates the dot product of two std::vectors. Use the BLAS dot product implementation, `cblas_ddot` for this.
+4. `calculateProjection`: Calculates the projection of one vector onto another. Use the two other functions you just implemented for this.
 
 - Recall the scalar projection of vector a onto b is given by: (a dot b) / norm(b)
 - You can access the BLAS functions using `#include <cblas.h>`
-
-4. Complete the empty parts of the `example_library/CMakeLists.txt` file. Use `find_package(BLAS REQUIRED)` to ensure the BLAS dependency is included in the compiled output.
 
 ### Part 4: Writing unit tests using the Google Testing framework
 
@@ -126,6 +125,10 @@ For `calculateTwoNorm`:
 3. Ensure the norm of (1,1) is the square root of two
 
 Ensure `calculateDotProduct` gives the correct results for the following cases:
+
+1. Ensure the dot product of 2 vectors where one of them is all 0s is zero
+2. Single element vectors dot products are simply multiplication
+3. Any other test case of your choice
 
 Ensure `calculateProjection` gives the correct results for the following cases:
 
