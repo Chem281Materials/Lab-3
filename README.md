@@ -28,9 +28,9 @@ Currently it includes a compiler (g++), make, cmake, lcov, and valgrind. Check o
 
 #### Tasks
 
-1. Build your development image and tag it with `cppdev/latest`. *NOTE*: You can specify the dockerfile when you build like this:
+1. Build your development image and tag it with `cppdev/latest`. *NOTE*: You can specify the dockerfile or containerfile when you build like this:
 
-```docker build -t cppdev/latest -f DevelopmentBase.Dockerfile .```
+```podman build -t cppdev/latest -f DevelopmentBase.Dockerfile .```
 
 2. Add a line to `develop_container.sh` that runs an interactive container based on your image and mounts the `example_library` directory to a directory in your container (I recommend `/workspace` - avoid using the filesystem root).
 3. Using the interactive container, navigate to the `src` directory (inside `example_library` on the host, but inside `/workspace` in the container) and create a new file called `README.md` with contents "Linear Algebra Tools". Confirm that this file appears on the host filesystem.
@@ -54,6 +54,7 @@ For this section, we will implement a few functions, as if we were writing a lib
 - main.cpp: this file can be compiled to an executable to run one of the linear_alg functions, no need to change it.
 
 To finish our library, you need to complete the implementations of the following functions, all found in `example_library/src/linear_alg.cpp`:
+Note: in the interest of time you can just complete `calculateTwoNorm` and then move on to the next part. If you finish the lab early you can complete the rest of the functions.
 
 1. Complete the empty parts of the `example_library/CMakeLists.txt` file. Use `find_package(BLAS REQUIRED)` to ensure the BLAS dependency is included in the compiled output.
 2. `calculateTwoNorm`: Calculates the 2-norm of a std::vector. Use the BLAS implementation for this, `cblas_dnrm2`.
