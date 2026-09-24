@@ -54,7 +54,7 @@ For this section, we will implement a few functions, as if we were writing a lib
 - main.cpp: this file can be compiled to an executable to run one of the linear_alg functions, no need to change it.
 
 To finish our library, you need to complete the implementations of the following functions, all found in `example_library/src/linear_alg.cpp`:
-Note: in the interest of time you can just complete `calculateTwoNorm` and then move on to the next part. If you finish the lab early you can complete the rest of the functions.
+**Note: in the interest of time you can just complete `calculateTwoNorm` and then move on to the next part. If you finish the lab early you can complete the rest of the functions.**
 
 1. Complete the empty parts of the `example_library/CMakeLists.txt` file. Use `find_package(BLAS REQUIRED)` to ensure the BLAS dependency is included in the compiled output.
 2. `calculateTwoNorm`: Calculates the 2-norm of a std::vector. Use the BLAS implementation for this, `cblas_dnrm2`.
