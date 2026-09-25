@@ -72,7 +72,7 @@ Depending on your personality, writing tests can feel boring or comforting or an
 
 To ensure that your function implementations are correct, use the Google Test Framework to write test cases for your projection function.
 
-To start, try running the tests. Do accomplish this, first compile the code:
+To start, try running the tests. To accomplish this, first compile the code:
 
 ```
 mkdir build
