@@ -8,7 +8,7 @@
 
 # Add an executable called Main built from src/main.cpp
 
-# Add the ./include directory as an include directory for the Main executable
+# Add the include directory as an include directory for the Main executable
 
 # Locate the BLAS package
 
